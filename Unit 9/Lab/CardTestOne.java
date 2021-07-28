@@ -1,0 +1,39 @@
+//(c) A+ Computer Science
+//www.apluscompsci.com
+//Name - Sophia Fisher
+//Date - 13 February 2020
+
+import static java.lang.System.*;
+import java.awt.Color;
+
+public class CardTestOne
+{
+	public static void main( String args[] )
+	{
+		Card one = new Card();
+		out.println(one);
+		
+		//Card two = new Card(2, "DIAMONDS");
+		//out.println(two);
+
+		Card two = new BlackJackCard(1,"DIAMONDS");
+		out.println(two);
+
+		Card three = new BlackJackCard(4,"CLUBS");
+		out.println(three);
+		
+		Card four = new BlackJackCard(12,"SPADES");
+		out.println(four);
+	
+		Card five = new BlackJackCard(12,"HEARTS");
+		out.println(five);	
+		
+		Card six = new BlackJackCard(9,"SPADES");
+		out.println(six);				
+
+		out.println(one.equals(two));
+		out.println(one.equals(one));		
+		out.println(four.equals(five));	
+		out.println(three.equals(four));						
+	}
+}

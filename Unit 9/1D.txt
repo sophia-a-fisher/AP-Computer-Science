@@ -1,0 +1,5 @@
+public Invitation(String address)
+{
+	this.address = address;
+	hostName = "Host";
+}

@@ -1,0 +1,4 @@
+public void setAdress(String place)
+{
+	address = place;
+}

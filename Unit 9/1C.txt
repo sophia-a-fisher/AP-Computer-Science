@@ -1,0 +1,5 @@
+public String invitationGenerator(String guest)
+{
+	String output = "Dear " + guest + ", please attend my event at " + address + ". See you then, " + hostName + ".";
+	return output;
+}

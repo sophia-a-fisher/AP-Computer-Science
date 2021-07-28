@@ -1,0 +1,29 @@
+public class PasswordGenerator
+{
+	public int digits = 0;
+	public String prefix = "A";
+	public static int count;
+	public PasswordGenerator(int digit, String s)
+	{
+		digits = digit;
+		prefix = s;
+	}
+
+	public PasswordGenerator(int digit)
+	{
+		digits = digit;
+	}
+
+	public void pwGen()
+	{
+		String output = "";
+		output += prefix + "." + (int)(Math.random()*Math.pow(10,digits));
+		System.out.println(output);
+		count++;
+	}
+
+	public int pwCount()
+	{
+		return count;
+	}
+}

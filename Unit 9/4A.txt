@@ -1,0 +1,26 @@
+public static void longestStreak(String str)
+{
+	String substring = str[0];
+	int maxLength = 0;
+	String maxString = "";
+	for(int i = 1; i < str.length(); i++)
+	{
+		if(str[i].equals(str[i-1]))
+		{
+			substring += str[i];
+		}
+		
+		else
+		{
+			if(substring.length() > maxLength)
+			{
+				maxLength = substring.length();
+				maxString = substring[0];
+			}
+			
+			substring = str[i];	
+		}
+	}
+
+	System.out.println(maxString + " " + maxLength);
+}

@@ -1,0 +1,27 @@
+/** Returns the number of coins (1, 2, or 3) that player 2 will spend, as described in part (a).
+
+*/
+
+public int getPlayer2Move(int round)
+{
+	int result = 0;
+	if (round%3 == 0)
+	{
+		result = 3;
+	}
+
+	else 
+	{
+		if(round%2 == 0)
+		{
+			result = 2;
+		}
+
+		else
+		{
+			result = 1;
+		}
+	}
+
+	return result;
+}
