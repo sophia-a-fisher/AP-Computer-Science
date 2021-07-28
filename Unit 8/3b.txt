@@ -1,0 +1,12 @@
+public static int DayOfWeek(int month, int dya, int year)
+{
+	int dayOfWeek = firstDayOfYear();
+	dayOfWeek += dayOfYear()%7;
+
+	if(dayOfWeek > 7)
+	{
+		dayOfWeek = dayOfWeek%7;
+	}
+	
+	return dayOfWeek;
+}

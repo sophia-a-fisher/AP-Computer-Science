@@ -1,0 +1,30 @@
+public boolean isBalanced(ArrayList<String> delimiters)
+{
+	private int openCount = 0;
+	private int closedCount = 0;
+
+	for (String element : delimiters)
+	{
+		if(element.compare(openDel))
+		{
+			openCount++;
+		}
+
+		if(element.compare(closedDel))
+		{
+			closedCount++;
+		}
+
+		if(closedCount>openCount)
+		{
+			return false;
+		}
+	}
+
+	if(openCount != closedCount)
+	{
+		return false;
+	}
+	
+	return true;
+}

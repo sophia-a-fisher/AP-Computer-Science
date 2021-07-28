@@ -1,0 +1,12 @@
+public ArrayList<String> getDelimitersList(String[] tokens)
+{
+	ArrayList<String> delimiterslist = new ArrayList<String>();
+	for (String element : tokens)
+	{
+		if(element.compare(openDel) || element.compare(closedDel))
+		{
+			delimitersList.add(element);
+		}
+	}
+	return delimitersList;
+}

@@ -1,0 +1,14 @@
+public static void numCombinations(int n, int r)
+{
+	int ways;
+	if(r>n)
+	{
+		ways = 0;
+	}
+
+	else
+	{
+		ways = (factorial(n)/(factorial(r)*(factorial(n-r))));	
+	}
+	System.out.println("There are " + ways + " ways of choosing " + r + " items from " + n + " choices.")
+}

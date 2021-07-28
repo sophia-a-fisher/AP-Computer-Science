@@ -1,0 +1,25 @@
+public static int getLongestRun(int[] values)
+{
+	int runLength = 0;
+	int temperaryLength = 0;
+	for(int i=1; i<values.length(); i++)
+	{
+		if(values[i] == values [i-1])
+		{
+			runLength++;
+		}
+
+		else if(runLength > temperaryLength && values[i] != values[i-1])
+		{
+			temperaryLength = runLength;
+			runLength = 0;
+		}
+	}
+
+	if(temperaryLength == 0)
+	{
+		return -1;
+	}
+
+	return temperaryLength;
+}

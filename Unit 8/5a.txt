@@ -1,0 +1,15 @@
+public static int factorial(int n)
+{
+	int result = 0;
+	if(n == 1)
+	{
+		return 1;
+	}
+	for(int i = n; i>0; i--)
+	{
+		result *= n;	
+	}
+
+	return result;
+
+}
