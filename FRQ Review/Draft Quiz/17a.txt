@@ -1,0 +1,24 @@
+//Part A
+public boolean isLevelTrailSegment(int start, int end)
+{
+	boolean isLevel = false;
+	int smallest = markers[start];
+	int largest = markers[start];
+	for(int i = start; i <= end; i++)
+	{
+		if(markers[i] < smallest)
+		{
+			smallest = markers[i];
+		}
+		
+		if(markers[i] > largest)
+		{
+			largest = markers[i];
+		}
+	}
+	if(largest - smallest <= 10)
+	{
+		isLevel = true;
+	}
+	return isLevel;
+}

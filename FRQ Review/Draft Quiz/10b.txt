@@ -1,0 +1,12 @@
+private boolean hasImproved()
+{
+	boolean improved = true;
+	for(int i = 0; i < scores.length - 1; i++)
+	{
+		if(scores[i+1] < scores[i])
+		{
+			improved = false;
+		}
+	}
+	return improved;
+}

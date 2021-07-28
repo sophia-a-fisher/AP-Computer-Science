@@ -1,0 +1,18 @@
+private void move()
+{
+	if(hall[pos] > 0)
+	{
+		hall[pos]--;
+	}
+	if(hall[pos] == 0)
+	{
+		if(!forwardMoveBlocked)	
+		{
+			pos++;
+		}
+		else
+		{
+			facingRight = false;
+		}
+	}
+}

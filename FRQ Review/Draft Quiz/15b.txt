@@ -1,0 +1,10 @@
+//Part B
+public boolean insertTile(NumberTile tile)
+{
+	if(this.getIndexForFit(tile) != -1)
+	{
+		board.add(this.getIndexForFit(tile),tile);
+		return true;
+	}
+	return false;
+}

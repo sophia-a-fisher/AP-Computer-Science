@@ -1,0 +1,14 @@
+//Part A
+public int getTotalBoxes()
+{
+	int totalBoxes = 0;
+	if(orders.size() == 0)
+	{
+		return totalBoxes;
+	}
+	for(CookieOrder element: orders)
+	{
+		totalBoxes += element.getNumBoxes();
+	}
+	return totalBoxes;
+}

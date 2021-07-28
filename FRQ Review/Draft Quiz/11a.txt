@@ -1,0 +1,12 @@
+
+//Part A
+public int getDuration()
+{
+	int duration = 0;
+	for(Flight element: flights)
+	{
+		duration += element.getDepartureTime().minutesUntil(element.getArrivalTime());
+	}
+	return duration;
+}
+

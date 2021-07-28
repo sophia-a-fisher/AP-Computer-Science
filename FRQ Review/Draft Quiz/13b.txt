@@ -1,0 +1,24 @@
+//Part B
+public static int getLongestRun(int[] values)
+{
+	int longestRunIndex = -1;
+	int longestRunStreak = 0;
+	int currentRunStreak = 0;
+	for(i = 1; i < values.length; i++)
+	{
+		if(values[i] == values[i-1])
+		{
+			currentRunStreak++;
+		}
+		else
+		{
+			currentRunStreak = 0;
+		}
+		if(currentRunStreak > longestRunStreak)
+		{
+			longestRunStreak = currentRunStreak;
+			longestRunIndex = i-currentRunStreak;
+		}
+	}
+	return longestRunIndex;
+}

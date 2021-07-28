@@ -1,0 +1,5 @@
+//Part A
+public void addClimb(String peakName, int climbTime)
+{
+	this.climbList.add(new ClimbInfo(peakName,climbTime));
+}

@@ -1,0 +1,24 @@
+
+//Part B
+
+public int getShortestLayover()
+{
+	int shortestLayover = -1;
+	if(flights.size() < 2)
+	{
+		return shortestLayover;
+	}
+	else
+	{
+		shortestLayover = flights.get(0).getArrivalTime().minutesUntil(flights.get(1).getDepartureTime());
+		for(int i = 1 ; i < flights.size() - 1; i++)
+		{
+			if(flights.get(i).getArrivalTime().minutesUntil(flights.get(i+1).getDepartureTime()) < shortestLayover)
+			{
+				shortestLayover = flights.get(i).getArrivalTime().minutesUntil(flights.get(i+1).getDepartureTime());
+			}
+		}
+		return shortestLayover;
+	}
+
+}

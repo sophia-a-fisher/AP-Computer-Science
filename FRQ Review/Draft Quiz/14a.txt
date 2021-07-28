@@ -1,0 +1,21 @@
+private int getChargingCost(int startHour, int chargeTime)
+{
+	int chargingCost = 0;
+	int j = 0;
+	
+	for(int i = 0; i < chargeTime; i++)
+	{
+		if(startHour+j > rateTable.length)
+		{
+			startHour = 0;
+			j = 1;
+		}
+		else
+		{
+			chargingCost += rateTable[startHour+j];
+			j++;
+		}
+		
+	}
+	return chargingCost;
+}

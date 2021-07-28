@@ -1,0 +1,11 @@
+
+//Part A
+public static int[] getCubeTosses(NumberCube cube, int numTosses)
+{
+	int[] numTosses = new int[numTosses];
+	for(i=0; i < numTosses; i++)
+	{
+		numTosses[i] = cube.toss();
+	}
+	return numTosses;
+}

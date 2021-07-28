@@ -1,0 +1,29 @@
+//Part B
+public void trimSilenceFromBeginning()
+{
+	int[] newSamples;
+	ArrayList<Integer> tempRay = new ArrayList<Integer>();
+	for(int element : samples)
+	{
+		tempRay.add(<Integer>element);
+	}
+	for(int i = 0 ; i < tempRay.size();i++)
+	{
+		if(tempRay.get(i) == 0)
+		{
+			tempRay.remove(i);
+			i--;
+		}
+		else if(tempRay.get(i) != 0)
+		{
+			break;
+		}
+	}
+	
+	newSamples = new int[tempRay.size()];
+	for(int i = 0; int < tempRay.size();i++)
+	{
+		newSamples[i] = tempRay.get(i);
+	}
+	samples = newSamples;
+}

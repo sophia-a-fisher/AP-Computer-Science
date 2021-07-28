@@ -1,0 +1,10 @@
+public void clearConflicts(Appointment appt)
+{
+	for(int i = apptList.size() - 1; i >= 0; i--)
+	{
+		if(apptList.get(i).conflictsWith(appt))
+		{		
+			apptList.remove(i);
+		}
+	}
+}

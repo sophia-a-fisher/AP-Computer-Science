@@ -1,0 +1,8 @@
+private boolean forwardMoveBlocked()
+{
+	if(hall.length == pos + 1 || 0 == pos - 1)
+	{
+		return true;
+	}
+	return false;
+}

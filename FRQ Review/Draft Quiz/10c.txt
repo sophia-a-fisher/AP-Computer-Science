@@ -1,0 +1,15 @@
+public double finalAverage()
+{
+	double finalAverage = 0.0;
+	if(hasImproved())
+	{
+		finalAverage = average(scores.length/2, scores.length-1);
+	}
+			
+	else
+	{
+		finalAverage = average(0,scores.length-1);
+	}
+	
+	return finalAverage;
+}

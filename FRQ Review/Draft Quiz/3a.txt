@@ -1,0 +1,8 @@
+public boolean conflictsWith(Appointment other)
+{
+	if(this.getTime().overlapsWith(other.getTime()))
+	{
+		return true;
+	}
+	return false;
+}

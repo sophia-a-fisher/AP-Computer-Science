@@ -1,0 +1,16 @@
+//Part B
+public int getChargeStartTime(int chargeTime) 
+{
+	int chargeStartTime = 0;
+	int minimumCharge = getChargingCost(0, chargeTime);
+	for(int i = 0; i < rateTable.length; i++)
+	{
+		if(getChargingCost(i,chargeTime) < minimumCharge)
+		{
+			minimumCharge = getChargingCost(i,chargeTime);
+			chargeStartTime = i;
+		}
+	}
+		
+	return chargeStartTime;
+}

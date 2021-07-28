@@ -1,0 +1,10 @@
+//Part A
+public TokenPass(int playerCount)
+{
+	board = new int[playerCount]; 
+	for(int i = 0; i < playerCount; i++)
+	{
+		board[i] = (int)(Math.random()*10);
+	}
+	currentPlayer = (int)Math.random()*playerCount;
+}

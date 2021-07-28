@@ -1,0 +1,22 @@
+//Part B
+public void moveToLocation(int locIndex)
+{
+	if(filler.getCurrentIndex() < locIndex)
+	{
+		if(!filler.isFacingRight())
+		{
+			filler.changeDirection();
+		}
+
+		filler.moveForward(locIndex-filler.getCurrentIndex());
+	}
+	else if(filler.getCurrentIndex() > locIndex)
+	{
+		if(filler.isFacingRight())
+		{
+			filler.changeDirection();
+		}
+
+			filler.moveForward(filler.getCurrentIndex()-locIndex);
+	}
+}

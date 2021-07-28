@@ -1,0 +1,14 @@
+//Part B
+public int removeVariety(String cookieVar)
+{
+	int numVariety = 0;
+	for(int i = orders.size()-1; i >=0; i--)
+	{
+		if(orders.get(i).getVariety().equals(cookieVar))
+		{
+			numVariety += orders.get(i).getNumBoxes();
+			orders.remove(i);
+		}
+	}
+	return numVariety;
+}

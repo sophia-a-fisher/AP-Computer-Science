@@ -1,0 +1,14 @@
+public static boolean isSelfDivisor(int number)
+{
+	while(number>0)
+	{
+		if(number%10 == 0)
+		{return false}
+
+		if(number%(number%10) != 0)
+		{return false}
+
+		number /= 10;
+	}
+	return true;
+}

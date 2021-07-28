@@ -1,0 +1,9 @@
+private double average(int first, int last)
+{
+	double average = 0.00;
+	for(int i = first; i <= last; i++)
+	{
+		average += scores[i];
+	}
+	return average/(last-first);
+}

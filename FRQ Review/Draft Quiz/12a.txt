@@ -1,0 +1,12 @@
+
+//Part A
+public String decodeString(ArrayList<StringPart> parts)
+{
+	String resultString = "";
+	for(StringPart element : parts)
+	{
+		resultString += masterString.substring(element.getStart(),element.getStart() + element.getLength());
+	}
+	return resultString;
+}
+

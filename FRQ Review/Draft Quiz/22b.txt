@@ -1,0 +1,18 @@
+//Part B
+public void updateDownloads(List<String> titles)
+{
+	DownloadInfo currentInfo = null;
+	for(int i = 0; i < titles.size();i++)
+	{
+			if(getDownloadInfo(titles.get(i)) != null)
+			{
+				currentInfo = getDownloadInfo(titles.get(i));
+				currentInfo.incrementTimesDownloaded();
+			}
+
+			else
+			{
+				downloadList.add(new DownloadInfo(titles.get(i)));
+			}
+	}
+}

@@ -1,0 +1,15 @@
+//Part B
+public double runSimulation(int num)
+{
+	int successfulTries = 0;
+	int totalTries = 0;
+	for(i = 0; i < num; i++)
+	{
+		totalTries++;
+		if(simulate())
+		{
+			successfulTries++;
+		}
+	}
+	return (double)successfulTries/totalTries;
+}

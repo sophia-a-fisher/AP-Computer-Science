@@ -1,0 +1,22 @@
+//Part A
+private int getIndexForFit(NumberTile tile)
+{
+	if(board.get(0).getLeft() == tile.getRight() || board.size() == 0)
+	{
+		return 0;
+	}
+	
+	else if(board.get(board.size()-1).getRight() == tile.getLeft())
+	{
+		return board.size()-1;
+	}
+	for(int i = 1; i < board.size(); i++)
+	{
+		if(board.get(i).getLeft() == tile.getRight() && board.get(i-1).getRight() == tile.getLeft())
+		{
+			return i;
+		}
+	}
+	
+	return -1;
+}

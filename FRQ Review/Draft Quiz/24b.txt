@@ -1,0 +1,13 @@
+//Part B
+public int numMatches()
+{
+	int numMatches = 0;
+	for(i = 0; i < allPairs.size();i++)
+	{
+		if(allPairs.get(i).getFirst().equals(allPairs.get(i).getSecond()))
+		{
+			numMatches++;
+		}
+	}
+	return numMatches;
+}

@@ -1,0 +1,19 @@
+
+//Part B
+
+public ArrayList<StringPart> encodeString(String word)
+{
+	ArrayList<StringPart> ray;
+	while(word.length() > 0)
+	{
+		for(int i = word.length(); i >= 0; i--)
+		{
+			if(masterString.getIndex(word.substring(0,i)) >= 0)
+			{
+				ray.add(new StringPart(masterString.getIndex(word[0])),i);
+				word = word.substring(i);
+			}
+		}
+	}
+	return ray;
+}

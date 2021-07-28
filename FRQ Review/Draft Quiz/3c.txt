@@ -1,0 +1,21 @@
+public boolean addAppt(Appointment appt, boolean emergency)
+{
+	if(emergency)
+	{
+		clearConflicts(appt);
+		apptList.add(appt);
+		return true;
+	}
+	else
+	{
+		for(int i = apptList.size() - 1; i >= 0; i--)
+		{
+			if(appt.conflictsWith(apptList.get(i)))
+			{
+				return false;
+			}
+		}
+	}
+	apptList.add(appt);
+	return true;
+}

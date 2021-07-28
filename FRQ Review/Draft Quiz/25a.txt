@@ -1,0 +1,23 @@
+//Part A
+public boolean simulate()
+{
+	boolean result = false;
+	int finalPosition = 0;
+	int hopDistance = 0;
+	for(i = maxHops; i > 0; i--)
+	{
+		hopDistance = hopDistance();
+		goalDistance -= hopDistance;
+		finalPosition += hopDistance;
+		
+		if(finalPosition < 0)
+		{
+			return result;
+		}
+		if(goalDistance <= 0)
+		{
+			return true;
+		}
+	}
+	return result;
+}

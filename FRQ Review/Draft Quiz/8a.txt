@@ -1,0 +1,18 @@
+public static String scrambleWord(String word)
+{
+	String newWord = "";
+	for(int i = 0; i < word.length(); i ++)
+	{
+		if(word[i] != "A" || (word[i] == "A" && i + 1 == word.length()))
+		{
+			newWord += word[i];
+		}
+		else if(word[i] == "A")
+		{
+			newWord += word[i+1];
+			newWord += word[i];
+			i++;
+		}
+	}
+	return newWord;
+}

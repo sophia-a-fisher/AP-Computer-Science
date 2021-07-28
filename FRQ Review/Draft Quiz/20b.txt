@@ -1,0 +1,16 @@
+//Part B
+public void addClimb(String peakName, int climbTime)
+{
+	int lastIndex = climbList.size()-1;
+	for(int i = 0; i < climbList.size(); i++)
+	{
+		if(peakName.compareTo(climbList.get(i).getName()) > 0)
+		{
+			climbList.add(i, new ClimbList(peakName, climbTime));
+		}
+	}
+	if(peakName.compareTo(climbList.get(lastIndex).getName()) < 0)
+	{
+		climbList.add(lastIndex, new ClimbList(peakName, climbTime));
+	}
+}

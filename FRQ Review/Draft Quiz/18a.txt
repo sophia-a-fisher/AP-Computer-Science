@@ -1,0 +1,19 @@
+//Part A
+public int limitAmplitude(int limit)
+{
+	int numsChanged = 0;
+	for(int i = 0; i < samples.length; i++)
+	{
+		if(samples[i] > limit)
+		{
+			samples[i] = limit;
+			numsChanged++;
+		}
+		else if (samples[i] < limit*-1)
+		{
+			samples[i] = limit*-1;
+			numsChanged++;
+		}
+	}
+	return numsChanged;
+}

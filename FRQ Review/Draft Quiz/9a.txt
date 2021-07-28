@@ -1,0 +1,14 @@
+
+public static int divBySum(int[] arr, int num)
+{
+	int sum = 0;
+	for(int element: arr)
+	{
+		if(element % num == 0)
+		{
+			sum += element;
+		}
+	}
+	return sum;
+}
+

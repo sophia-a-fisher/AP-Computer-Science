@@ -1,0 +1,26 @@
+//Part B
+public void consolidate()
+{
+	ArrayList<Horse> tempRay = new ArrayList<Horse>();
+	Horse[] newRay;
+	for(Horse element : spaces)
+	{
+		if(element != null)
+		{
+			tempRay.add(element);
+		}
+	}
+	for(int i = 0; i < (spaces.length - tempRay.size()); i++)
+	{
+		tempRay.add(null);
+	}
+	
+	newRay = new Horse[tempRay.size()];
+	for(int i = 0; i < tempRay.size(); i++)
+	{
+		newRay[i] = tempRay.get(i);
+	}
+	
+	spaces = newRay;
+	
+}

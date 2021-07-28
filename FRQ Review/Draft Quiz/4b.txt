@@ -1,0 +1,14 @@
+public String highestScoringStudent(ArrayList<String> key)
+{
+	int highestScoreIndex = 0;
+	int highestScore = 0;
+	for(int i = 0; i < key.size(); i++)
+	{
+		if(sheets.get(i).getScore(key) > highestScore)
+		{
+			highestScore = sheets.get(i).getScore(key);
+			highestScoreIndex = i;
+		}
+	}
+	return sheets.get(highestScoreIndex).getName()
+}

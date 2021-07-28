@@ -1,0 +1,7 @@
+public void recordScores(int[] stuScores)
+{
+	for(int element : stuScores)
+	{	
+		record(element);
+	}
+}

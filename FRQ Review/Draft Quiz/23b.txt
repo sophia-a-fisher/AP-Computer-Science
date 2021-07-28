@@ -1,0 +1,34 @@
+//Part B
+//This one is confusing we need help
+public void distributeCurrentPlayerTokens()
+{
+	int prevReciever = 0;
+	int biggestNumber = board[0];
+			while(currentPlayer > 0)
+			{
+				for(int j = 0; j < board.length; j++)
+				{
+					if(board[j] > biggestNumber)
+					{
+						biggestNumber = board[j];
+						prevReciever = j;
+					}
+				}
+				for(int i = 0; i < board.length; i++)
+				{
+					board[prevReciever]++;
+					currentPlayer--;
+					for(int n = 0; n < board.length; n++)
+					{
+						biggestNumber = board[0];
+						if(board[n] > biggestNumber && n != prevNumber)
+						{
+							biggestNumber = board[j];
+							prevReciever = j;
+						}
+					}
+				}
+
+			}
+
+}

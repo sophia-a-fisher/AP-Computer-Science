@@ -1,0 +1,9 @@
+public int compareCustomer(Customer other)
+{
+	if(this.getName().compareTo(other.getName()) == 0)
+	{
+		return this.getID().compareTo(other.getID());
+	}
+
+	return	this.getName().compareTo(other.getName());
+}

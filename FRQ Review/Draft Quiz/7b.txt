@@ -1,0 +1,11 @@
+public void removeWordsOfLength(int length)
+{
+	for(int i = myList.size() - 1; i >= 0; i--)
+	{
+		if(myList.get(i).length() == length)
+		{
+			myList.remove(i);
+		}
+	}
+	
+}

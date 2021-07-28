@@ -1,0 +1,13 @@
+//Part A
+public DownloadInfo getDownloadInfo(String title)
+{
+	DownloadInfo myInfo = null;
+	for(DownloadInfo element : downloadList)
+	{
+		if(title.equals(element.getTitle()))
+		{
+			myInfo = element;
+		}
+	}
+	return myInfo;
+}

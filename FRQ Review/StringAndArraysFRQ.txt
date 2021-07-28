@@ -1,0 +1,64 @@
+//partA
+private String recombine(String word1, String word2)
+{
+	String recombinedString = word1.substring(0,word1.length()/2) + word2.substring(word2.length()/2,word2.length());
+	return recombinedString;
+}
+
+//partB
+private String[] mixedWords(String[] words)
+{
+	String[] tempRay = new String[words.length];
+	int counter = 0;
+	for(int i = 0; i< words.length, i += 2)
+	{
+		tempRay[counter] = recombine(words[i],words[i+1]);
+		counter++;
+		tempRay[counter] = recombine(words[i+1],words[i]);
+		counter++;
+	}
+	return tempRay;
+}
+
+//partA
+public static int getPeakIndex(int[] array)
+{
+	for(int i = 1; i < array.length-1; i++)
+	{
+		if(array[i] > array[i-1] && array[i] > array[i+1])
+		{
+			return i;
+		}
+	}
+
+	return -1;
+}
+
+//partB
+public static boolean isMountain(int[] array)
+{
+	int peakIndex = getPeakIndex(array);
+	for(int i = 0; i < array.length; i++)
+	{
+		if(peakIndex == -1)
+		{
+			return false;	
+		}
+		else if(i<peakIndex)
+		{
+			if(array[i] > array[i+1])
+			{
+				return false;			
+			}
+		}
+
+		else if(i>peakIndex)
+		{
+			if(array[i] > array[i-1])
+			{
+				return false;			
+			}
+		}
+	}
+	return true;
+}

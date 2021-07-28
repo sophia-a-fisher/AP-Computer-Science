@@ -1,0 +1,14 @@
+public double getScore(ArrayList<String> key)
+{
+	double score = 0.0;
+	for(int i = 0; i < key.size(); i++)
+	{
+		if(key.get(i) == "?")
+		{}
+		else if (key.get(i) == answers.get(i))
+		{score++;}
+		else 
+		{score -= .25;}
+	}
+	return score;
+}
